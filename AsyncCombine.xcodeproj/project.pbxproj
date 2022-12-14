@@ -29,6 +29,7 @@
 		1971EFCB2948CC8500FCD461 /* AsyncCombine.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = AsyncCombine.docc; sourceTree = "<group>"; };
 		1971EFD12948CC8500FCD461 /* AsyncCombineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsyncCombineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1971EFD62948CC8500FCD461 /* AsyncCombineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncCombineTests.swift; sourceTree = "<group>"; };
+		1971EFE32949C29600FCD461 /* Publishers.AwaitMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publishers.AwaitMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				1971EFCA2948CC8500FCD461 /* AsyncCombine.h */,
+				1971EFE12949C29600FCD461 /* Sources */,
 				1971EFCB2948CC8500FCD461 /* AsyncCombine.docc */,
 			);
 			path = AsyncCombine;
@@ -83,6 +85,22 @@
 				1971EFD62948CC8500FCD461 /* AsyncCombineTests.swift */,
 			);
 			path = AsyncCombineTests;
+			sourceTree = "<group>";
+		};
+		1971EFE12949C29600FCD461 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1971EFE22949C29600FCD461 /* Publishers */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		1971EFE22949C29600FCD461 /* Publishers */ = {
+			isa = PBXGroup;
+			children = (
+				1971EFE32949C29600FCD461 /* Publishers.AwaitMap.swift */,
+			);
+			path = Publishers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
