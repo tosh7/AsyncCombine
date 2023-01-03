@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1971EFCC2948CC8500FCD461 /* AsyncCombine.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1971EFCB2948CC8500FCD461 /* AsyncCombine.docc */; };
 		1971EFD22948CC8500FCD461 /* AsyncCombine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1971EFC72948CC8500FCD461 /* AsyncCombine.framework */; };
-		1971EFD72948CC8500FCD461 /* AsyncCombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971EFD62948CC8500FCD461 /* AsyncCombineTests.swift */; };
+		1971EFD72948CC8500FCD461 /* AwaitMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971EFD62948CC8500FCD461 /* AwaitMapTests.swift */; };
 		1971EFD82948CC8500FCD461 /* AsyncCombine.h in Headers */ = {isa = PBXBuildFile; fileRef = 1971EFCA2948CC8500FCD461 /* AsyncCombine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 		1971EFCA2948CC8500FCD461 /* AsyncCombine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AsyncCombine.h; sourceTree = "<group>"; };
 		1971EFCB2948CC8500FCD461 /* AsyncCombine.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = AsyncCombine.docc; sourceTree = "<group>"; };
 		1971EFD12948CC8500FCD461 /* AsyncCombineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsyncCombineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1971EFD62948CC8500FCD461 /* AsyncCombineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncCombineTests.swift; sourceTree = "<group>"; };
+		1971EFD62948CC8500FCD461 /* AwaitMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwaitMapTests.swift; sourceTree = "<group>"; };
 		1971EFE32949C29600FCD461 /* Publishers.AwaitMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publishers.AwaitMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1915917C2964001A00302541 /* Publishers */ = {
+			isa = PBXGroup;
+			children = (
+				1971EFD62948CC8500FCD461 /* AwaitMapTests.swift */,
+			);
+			path = Publishers;
+			sourceTree = "<group>";
+		};
 		1971EFBD2948CC8500FCD461 = {
 			isa = PBXGroup;
 			children = (
@@ -82,7 +90,7 @@
 		1971EFD52948CC8500FCD461 /* AsyncCombineTests */ = {
 			isa = PBXGroup;
 			children = (
-				1971EFD62948CC8500FCD461 /* AsyncCombineTests.swift */,
+				1915917C2964001A00302541 /* Publishers */,
 			);
 			path = AsyncCombineTests;
 			sourceTree = "<group>";
@@ -220,7 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1971EFD72948CC8500FCD461 /* AsyncCombineTests.swift in Sources */,
+				1971EFD72948CC8500FCD461 /* AwaitMapTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
