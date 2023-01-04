@@ -6,20 +6,31 @@
 //
 
 import XCTest
+import Combine
 @testable import AsyncCombine
 
 final class AwaitMapTests: XCTestCase {
 
-    private func awaiting(for seconds: Double) async -> Double {
-        return seconds + 2.0
+    private func asyncAddition(with value: Int) async -> Int {
+        try? await Task.sleep(nanoseconds: 2__000_000_000)
+        return value + 2
     }
 
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+        var counter = 0
+        let publisher = PassthroughSubject<Int, Never>()
+        let map = publisher.tryMap { value -> Int in
+            counter += 1
+//            return await asyncAddition(with: value)
+            let newValue = value + 1
+            return newValue
+        }
+
+        publisher.send(1)
+        publisher.send(2)
+        publisher.send(3)
+
+        XCTAssertEqual(counter, 2)
     }
 
 }
