@@ -12,6 +12,7 @@
 		19498F222A0BE41500486332 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19498F212A0BE41500486332 /* ContentView.swift */; };
 		19498F242A0BE41600486332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19498F232A0BE41600486332 /* Assets.xcassets */; };
 		19498F272A0BE41600486332 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19498F262A0BE41600486332 /* Preview Assets.xcassets */; };
+		19498F2C2A0BE4C600486332 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19498F2B2A0BE4C600486332 /* ContentViewModel.swift */; };
 		1971EFCC2948CC8500FCD461 /* AsyncCombine.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1971EFCB2948CC8500FCD461 /* AsyncCombine.docc */; };
 		1971EFD22948CC8500FCD461 /* AsyncCombine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1971EFC72948CC8500FCD461 /* AsyncCombine.framework */; };
 		1971EFD72948CC8500FCD461 /* AwaitMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971EFD62948CC8500FCD461 /* AwaitMapTests.swift */; };
@@ -34,6 +35,7 @@
 		19498F212A0BE41500486332 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		19498F232A0BE41600486332 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19498F262A0BE41600486332 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		19498F2B2A0BE4C600486332 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		1971EFC72948CC8500FCD461 /* AsyncCombine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AsyncCombine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1971EFCA2948CC8500FCD461 /* AsyncCombine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AsyncCombine.h; sourceTree = "<group>"; };
 		1971EFCB2948CC8500FCD461 /* AsyncCombine.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = AsyncCombine.docc; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				19498F1F2A0BE41500486332 /* ExampleApp.swift */,
 				19498F212A0BE41500486332 /* ContentView.swift */,
+				19498F2B2A0BE4C600486332 /* ContentViewModel.swift */,
 				19498F232A0BE41600486332 /* Assets.xcassets */,
 				19498F252A0BE41600486332 /* Preview Content */,
 			);
@@ -224,7 +227,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					19498F1C2A0BE41500486332 = {
 						CreatedOnToolsVersion = 14.3;
@@ -290,6 +293,7 @@
 			files = (
 				19498F222A0BE41500486332 /* ContentView.swift in Sources */,
 				19498F202A0BE41500486332 /* ExampleApp.swift in Sources */,
+				19498F2C2A0BE4C600486332 /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
