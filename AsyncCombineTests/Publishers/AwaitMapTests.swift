@@ -16,21 +16,21 @@ final class AwaitMapTests: XCTestCase {
         return value + 2
     }
 
-    func testExample() throws {
-        var counter = 0
+    /// check if AsyncMap works fine
+    func testAsyncMap() {
+        let expectation = XCTestExpectation(description: "asyncMap")
+        var cancellables = Set<AnyCancellable>()
         let publisher = PassthroughSubject<Int, Never>()
-        let map = publisher.tryMap { value -> Int in
-            counter += 1
-//            return await asyncAddition(with: value)
-            let newValue = value + 1
-            return newValue
+        let map = publisher.asyncMap { value -> Int in
+            return await self.asyncAddition(with: value)
         }
 
+        map.sink { value in
+            XCTAssertEqual(value, 3)
+            expectation.fulfill()
+        }.store(in: &cancellables)
+
         publisher.send(1)
-        publisher.send(2)
-        publisher.send(3)
-
-        XCTAssertEqual(counter, 2)
+        wait(for: [expectation], timeout: 3.0)
     }
-
 }
