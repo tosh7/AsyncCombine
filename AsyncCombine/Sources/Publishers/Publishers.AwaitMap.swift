@@ -9,16 +9,17 @@ import Foundation
 import Combine
 
 extension Publisher {
-    public func awaitMap<Result>(
-        _ transform: @escaping (Output) -> Result
-    ) -> Publishers.Map<Self, Result> {
-        return Publishers.AwaitMap(upstream: self, transform: transform)
-    }
-}
-
-extension Publisher {
-    public struct AwaitMap<Upstream: Publisher, Output>: Publisher {
-
-
+    public func asyncMap<T>(
+        _ transform: @escaping (Output) async -> T
+    ) -> Publishers.FlatMap<Future<T, Never>, Self> {
+        flatMap { value in
+            Future { promise in
+                // Call this task in main actor to avoid sequence reordering
+                Task { @MainActor in
+                    let output = await transform(value)
+                    promise(.success(output))
+                }
+            }
+        }
     }
 }
