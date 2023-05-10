@@ -22,4 +22,22 @@ extension Publisher {
             }
         }
     }
+
+    public func asyncMap<T>(
+        _ transform: @escaping (Output) async throws -> T
+    ) -> Publishers.FlatMap<Future<T, Error>, Self> {
+        flatMap { value in
+            Future { promise in
+                // Call this task in main actor to avoid sequence reordering
+                Task { @MainActor in
+                    do {
+                        let output = try await transform(value)
+                        promise(.success(output))
+                    } catch let error {
+                        promise(.failure(error))
+                    }
+                }
+            }
+        }
+    }
 }
